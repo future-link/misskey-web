@@ -384,16 +384,6 @@ class PostForm
 			, i * 50
 
 		$contents = $ '#misskey-contents'
-		$ {blur-radius: 0} .animate {blur-radius: 5}, {
-			duration: 100ms
-			easing: \linear
-			step: ->
-				$contents.css {
-					'-webkit-filter': "blur(#{@blur-radius}px)"
-					'-moz-filter': "blur(#{@blur-radius}px)"
-					'filter': "blur(#{@blur-radius}px)"
-				}
-		}
 
 		THIS.status-post-form.focus!
 		THIS.active-tab = \status

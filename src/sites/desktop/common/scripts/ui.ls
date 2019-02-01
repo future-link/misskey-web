@@ -414,22 +414,6 @@ class PostForm
 				$ \#misskey-post-form-container .css \display \none
 
 		$contents = $ '#misskey-contents'
-		$ {blur-radius: 5} .animate {blur-radius: 0}, {
-			duration: 100ms
-			easing: \linear
-			step: ->
-				$contents.css {
-					'-webkit-filter': "blur(#{@blur-radius}px)"
-					'-moz-filter': "blur(#{@blur-radius}px)"
-					'filter': "blur(#{@blur-radius}px)"
-				}
-			complete: ->
-				$contents.css {
-					'-webkit-filter': ""
-					'-moz-filter': ""
-					'filter': ""
-				}
-		}
 
 class StatusPostForm
 	(post-form) ->

@@ -7,7 +7,7 @@ export default function createWithFile(req: express.Request, res: express.Respon
 	if (file !== undefined && file !== null) {
 		const data: any = {};
 		data.file = {
-			value: fs.readFileSync(file.path),
+			value: fs.createReadStream(file.path),
 			options: {
 				filename: file.originalname,
 				contentType: file.mimetype

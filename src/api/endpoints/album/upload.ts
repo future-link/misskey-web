@@ -8,7 +8,7 @@ export default function upload(req: express.Request, res: express.Response): voi
 	const folder: string = req.body.folder;
 	const data: any = {};
 	data.file = {
-		value: fs.readFileSync(file.path),
+		value: fs.createReadStream(file.path),
 		options: {
 			filename: file.originalname,
 			contentType: file.mimetype
